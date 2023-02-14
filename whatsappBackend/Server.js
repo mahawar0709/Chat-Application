@@ -4,10 +4,13 @@ import mongoose from "mongoose";
 import Messages from "./dbMessages.js";
 import Pusher from "pusher";
 import path from "path"
+import {fileURLToPath} from 'url';
 // import cors from "cors"
 //app-config
 const app = express();
 const port = process.env.port || 9000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const pusher = new Pusher({
   appId: "1553368",
